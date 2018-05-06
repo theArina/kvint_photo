@@ -1,0 +1,150 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #19121e;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: #19121e;
+}
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.header-row {
+  min-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo img {
+  height: 150px;
+}
+
+/* SLIDESHOW */
+
+.wrapper {
+  overflow: hidden;
+}
+.wrapper img {
+  box-shadow: -3px 3px 10px -2px rgba(0,0,0,.3);
+  position: absolute;
+  width: 100%;
+  max-width: 1120px;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 46%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  max-width: 1120px;
+  margin: 15px auto;
+}
+.prev {
+    left: -30px;
+ }
+.next {
+    right: -30px;
+}
+.slider {
+    height: 750px;
+    width: 100%;
+    max-width: 1120px;
+    position: relative;
+    overflow: hidden;
+}
+.slider:hover .prev {
+    left: 20px;
+    opacity: 1;
+}
+.slider:hover .next{
+    right: 20px;
+    opacity: 1;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FOOTER */
+
+.footer-row {
+  padding: 20px 0;
+}
+.footer-col:first-child {
+  text-align: center;
+}
+.social-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.social-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  margin-left: 12px;
+  text-align: center;
+  font-size: 15px;
+  color: #19121e;
+  background-color: rgba(20,20,20,0);
+  transform: scale(1);
+  transition: .3s linear;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+  background: #19121e;
+  color: #fff;
+}
+.telephone {
+  margin-left: auto;
+  margin-right: 20px;
+}
+@media (min-width: 480px) {
+  .footer-row { display: flex; }
+  .social-icons-wrapper {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  .footer-col:first-child { text-align: left; }
+}
